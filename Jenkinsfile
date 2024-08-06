@@ -32,6 +32,13 @@ stage("sonar quality check"){
             }
         }
 
+stage('Docker Build') {
+       agent any
+       steps {
+        sh 'docker build -t sivanext/spring-petclinic:latest .'
+      }
+    }
+
 }
 }
 

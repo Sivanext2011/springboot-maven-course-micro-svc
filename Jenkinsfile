@@ -46,6 +46,8 @@ stage('Docker Push') {
           sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
           sh 'docker push sivanext/spring-petclinic:latest'
         }
+}
+}
 
 
 }
